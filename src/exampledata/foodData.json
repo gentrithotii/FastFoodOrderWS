@@ -1,0 +1,51 @@
+[
+  {
+    "id": "f001",
+    "title": "Organic Apples",
+    "image": "https://placehold.co/150x150/87CEEB/FFFFFF?text=Apples",
+    "description": "Crisp and juicy organic Fuji apples, perfect for snacking or baking.",
+    "price": 3.99
+  },
+  {
+    "id": "f002",
+    "title": "Whole Wheat Bread",
+    "image": "https://placehold.co/150x150/D2B48C/000000?text=Bread",
+    "description": "Freshly baked whole wheat bread, rich in fiber and flavor.",
+    "price": 4.5
+  },
+  {
+    "id": "f003",
+    "title": "Grass-fed Beef Steaks",
+    "image": "https://placehold.co/150x150/CD5C5C/FFFFFF?text=Steaks",
+    "description": "Premium cuts of grass-fed sirloin steaks, tender and flavorful.",
+    "price": 12.75
+  },
+  {
+    "id": "f004",
+    "title": "Almond Milk (Unsweetened)",
+    "image": "https://placehold.co/150x150/F5DEB3/000000?text=Almond+Milk",
+    "description": "Dairy-free almond milk, unsweetened and fortified with calcium.",
+    "price": 3.2
+  },
+  {
+    "id": "f005",
+    "title": "Spinach Bunch",
+    "image": "https://placehold.co/150x150/6B8E23/FFFFFF?text=Spinach",
+    "description": "Fresh, leafy spinach, great for salads or cooking.",
+    "price": 2.1
+  },
+  {
+    "id": "f006",
+    "title": "Artisan Cheese Assortment",
+    "image": "https://placehold.co/150x150/DAA520/FFFFFF?text=Cheese",
+    "description": "A selection of fine artisan cheeses, perfect for a platter.",
+    "price": 15.0
+  },
+  {
+    "id": "f007",
+    "title": "Wild-Caught Salmon Fillet",
+    "image": "https://placehold.co/150x150/FF7F50/FFFFFF?text=Salmon",
+    "description": "High-quality wild-caught salmon, rich in Omega-3s.",
+    "price": 18.99
+  }
+]

@@ -1,17 +1,20 @@
-import { useState } from "react";
-
 import "./App.css";
-import FoodItem from "./components/FoodItem";
+import DisplayItems from "./components/DisplayItems";
 
 function App() {
   return (
-    <>
+    <div>
       <div>
-        <div>
-          <FoodItem />
-        </div>
+        <h1>Header</h1>
       </div>
-    </>
+
+      {/* Put display items and your order in same file */}
+      <DisplayItems />
+
+      <div>
+        <h1>Foot</h1>
+      </div>
+    </div>
   );
 }
 

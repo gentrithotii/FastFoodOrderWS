@@ -24,6 +24,34 @@ const DisplayItems = () => {
     }
   };
 
+  const handleAddQuantity = (title) => {
+    const updatedOrders = orderItems.map((o) =>
+      o.orderTitle === title
+        ? {
+            ...o,
+            orderQuantity: o.orderQuantity + 1,
+            totalOrderPrice: (o.orderQuantity + 1) * o.orderPrice,
+          }
+        : o
+    );
+    setOrderItems(updatedOrders);
+  };
+
+  const handleRemoveQuantity = (title) => {
+    const updatedOrders = orderItems
+      .map((o) =>
+        o.orderTitle === title
+          ? {
+              ...o,
+              orderQuantity: o.orderQuantity - 1,
+              totalOrderPrice: (o.orderQuantity - 1) * o.orderPrice,
+            }
+          : o
+      )
+      .filter((o) => o.orderQuantity > 0);
+    setOrderItems(updatedOrders);
+  };
+
   return (
     <div className="container py-4">
       <h1 className="text-center mb-4">Fast Food Menu</h1>
@@ -42,7 +70,11 @@ const DisplayItems = () => {
         ))}
       </div>
 
-      <OrderDetails orderList={orderItems} />
+      <OrderDetails
+        orderList={orderItems}
+        handleAddQuantity={handleAddQuantity}
+        handleRemoveQuantity={handleRemoveQuantity}
+      />
     </div>
   );
 };

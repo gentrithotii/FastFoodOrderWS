@@ -1,4 +1,8 @@
-const OrderDetails = ({ orderList }) => {
+const OrderDetails = ({
+  orderList,
+  handleAddQuantity,
+  handleRemoveQuantity,
+}) => {
   const total = orderList.reduce((sum, item) => sum + item.totalOrderPrice, 0);
 
   return (
@@ -14,13 +18,19 @@ const OrderDetails = ({ orderList }) => {
           <div className="col">{item.orderTitle}</div>
           <div className="col-auto">
             <div className="btn-group">
-              <button className="btn btn-outline-danger btn-sm">
+              <button
+                className="btn btn-outline-danger btn-sm"
+                onClick={() => handleRemoveQuantity(item.orderTitle)}
+              >
                 <i className="bi bi-dash">-</i>
               </button>
               <button className="btn btn-outline-secondary btn-sm" disabled>
                 {item.orderQuantity}
               </button>
-              <button className="btn btn-outline-success btn-sm">
+              <button
+                className="btn btn-outline-success btn-sm"
+                onClick={() => handleAddQuantity(item.orderTitle)}
+              >
                 <i className="bi bi-plus">+</i>
               </button>
             </div>

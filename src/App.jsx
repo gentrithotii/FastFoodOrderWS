@@ -1,21 +1,5 @@
-import "./App.css";
-import DisplayItems from "./components/DisplayItems";
+import ShopDemo from "./page/shopDemo";
 
-function App() {
-  return (
-    <div>
-      <div>
-        <h1>Header</h1>
-      </div>
-
-      {/* Put display items and your order in same file */}
-      <DisplayItems />
-
-      <div>
-        <h1>Foot</h1>
-      </div>
-    </div>
-  );
+export default function App() {
+  return <ShopDemo />;
 }
-
-export default App;

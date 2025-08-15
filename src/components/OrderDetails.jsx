@@ -1,4 +1,6 @@
-const OrderDetails = () => {
+const OrderDetails = ({ orderList }) => {
+  const total = orderList.reduce((sum, item) => sum + item.totalOrderPrice, 0);
+
   return (
     <div className="mt-5 p-3 border rounded">
       <h4>Your order</h4>
@@ -7,25 +9,27 @@ const OrderDetails = () => {
         <div className="col-auto">Price</div>
       </div>
 
-      <div className="row align-items-center py-2 border-bottom">
-        <div className="col">Cheeseburger</div>
-        <div className="col-auto">
-          <div className="btn-group">
-            <button className="btn btn-outline-danger btn-sm">
-              <i className="bi bi-dash">-</i>
-            </button>
-            <button className="btn btn-outline-secondary btn-sm" disabled>
-              1
-            </button>
-            <button className="btn btn-outline-success btn-sm">
-              <i className="bi bi-plus">+</i>
-            </button>
+      {orderList.map((item, index) => (
+        <div className="row align-items-center py-2 border-bottom" key={index}>
+          <div className="col">{item.orderTitle}</div>
+          <div className="col-auto">
+            <div className="btn-group">
+              <button className="btn btn-outline-danger btn-sm">
+                <i className="bi bi-dash">-</i>
+              </button>
+              <button className="btn btn-outline-secondary btn-sm" disabled>
+                {item.orderQuantity}
+              </button>
+              <button className="btn btn-outline-success btn-sm">
+                <i className="bi bi-plus">+</i>
+              </button>
+            </div>
           </div>
+          <div className="col-auto">SEK {item.totalOrderPrice}</div>
         </div>
-        <div className="col-auto">SEK 99</div>
-      </div>
+      ))}
 
-      <div className="text-end fw-bold mt-3">Total: SEK 99</div>
+      <div className="text-end fw-bold mt-3">Total: SEK {total}</div>
     </div>
   );
 };

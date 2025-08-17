@@ -1,14 +1,4 @@
 const FoodItem = ({ title, image, description, price, handleAddItem }) => {
-  const addItem = () => {
-    let item = {
-      orderTitle: title,
-      orderPrice: price,
-      orderQuantity: 1,
-      totalOrderPrice: price,
-    };
-    handleAddItem(item);
-  };
-
   return (
     <div className="card h-100">
       {image ? (
@@ -23,7 +13,18 @@ const FoodItem = ({ title, image, description, price, handleAddItem }) => {
         <h5 className="card-title">{title}</h5>
         <p className="card-text">{description}</p>
         <p className="fw-bold">SEK {price}</p>
-        <button className="btn btn-primary w-100 mt-auto" onClick={addItem}>
+        <button
+          className="btn btn-primary w-100 mt-auto"
+          onClick={() => {
+            let item = {
+              orderTitle: title,
+              orderPrice: price,
+              orderQuantity: 1,
+              totalOrderPrice: price,
+            };
+            handleAddItem(item);
+          }}
+        >
           Add to order
         </button>
       </div>

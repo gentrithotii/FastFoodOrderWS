@@ -35,11 +35,11 @@ const OrderDetails = ({
               </button>
             </div>
           </div>
-          <div className="col-auto">SEK {item.totalOrderPrice}</div>
+          <div className="col-auto">SEK {item.totalOrderPrice.toFixed(2)}</div>
         </div>
       ))}
 
-      <div className="text-end fw-bold mt-3">Total: SEK {total}</div>
+      <div className="text-end fw-bold mt-3">Total: SEK {total.toFixed(2)}</div>
     </div>
   );
 };

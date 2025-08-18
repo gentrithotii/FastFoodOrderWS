@@ -12,7 +12,7 @@ const ShopDemo = () => {
 
   return (
     <div className="container py-4">
-      <div className="mb-3 text-end">
+      <div className="mb-3 text-start">
         <button
           className="btn btn-outline-secondary btn-sm"
           onClick={toggleTheme}

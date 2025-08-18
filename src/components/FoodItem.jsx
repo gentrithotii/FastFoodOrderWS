@@ -13,7 +13,7 @@ const FoodItem = ({ title, image, description, price, handleAddItem }) => {
         <h5 className="card-title">{title}</h5>
         <p className="card-text ">{description}</p>
         <div className="d-flex flex-column justify-content-between mt-auto">
-          <p className="fw-bold mb-2">SEK {price}</p>
+          <p className="fw-bold mb-2">SEK {price.toFixed(2)}</p>
           <button
             className="btn btn-primary"
             onClick={() => {

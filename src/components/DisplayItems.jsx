@@ -57,8 +57,8 @@ const DisplayItems = () => {
       <h1 className="text-center mb-4">Fast Food Menu</h1>
 
       <div className="row g-4">
-        {foodOrderData.map((i, index) => (
-          <div className="col-sm-6 col-md-4 col-lg-3" key={index}>
+        {foodOrderData.map((i) => (
+          <div className="col-sm-6 col-md-4 col-lg-3" key={i.id}>
             <FoodItem
               image={i.image}
               title={i.title}

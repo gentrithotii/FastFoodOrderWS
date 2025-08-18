@@ -15,8 +15,10 @@ const OrderDetails = ({
 
       {orderList.map((item, index) => (
         <div className="row align-items-center py-2 border-bottom" key={index}>
-          <div className="col">{item.orderTitle}</div>
-          <div className="col-auto">
+          <div className="col-4">
+            <p className="">{item.orderTitle}</p>
+          </div>
+          <div className="col-4 text-center">
             <div className="btn-group">
               <button
                 className="btn btn-outline-danger btn-sm"
@@ -35,7 +37,9 @@ const OrderDetails = ({
               </button>
             </div>
           </div>
-          <div className="col-auto">SEK {item.totalOrderPrice.toFixed(2)}</div>
+          <div className="col-4 text-end">
+            SEK {item.totalOrderPrice.toFixed(2)}
+          </div>
         </div>
       ))}
 

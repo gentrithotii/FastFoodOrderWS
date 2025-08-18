@@ -11,22 +11,24 @@ const FoodItem = ({ title, image, description, price, handleAddItem }) => {
 
       <div className="card-body d-flex flex-column text-start">
         <h5 className="card-title">{title}</h5>
-        <p className="card-text">{description}</p>
-        <p className="fw-bold">SEK {price}</p>
-        <button
-          className="btn btn-primary w-100 mt-auto"
-          onClick={() => {
-            let item = {
-              orderTitle: title,
-              orderPrice: price,
-              orderQuantity: 1,
-              totalOrderPrice: price,
-            };
-            handleAddItem(item);
-          }}
-        >
-          Add to order
-        </button>
+        <p className="card-text ">{description}</p>
+        <div className="d-flex flex-column justify-content-between mt-auto">
+          <p className="fw-bold mb-2">SEK {price}</p>
+          <button
+            className="btn btn-primary"
+            onClick={() => {
+              let item = {
+                orderTitle: title,
+                orderPrice: price,
+                orderQuantity: 1,
+                totalOrderPrice: price,
+              };
+              handleAddItem(item);
+            }}
+          >
+            Add
+          </button>
+        </div>
       </div>
     </div>
   );

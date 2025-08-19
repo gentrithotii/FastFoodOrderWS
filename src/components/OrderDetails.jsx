@@ -1,3 +1,5 @@
+import { formatCurrency } from "../utils/formatter";
+
 const OrderDetails = ({
   orderList,
   handleAddQuantity,
@@ -38,12 +40,14 @@ const OrderDetails = ({
             </div>
           </div>
           <div className="col-4 text-end">
-            SEK {item.totalOrderPrice.toFixed(2)}
+            {formatCurrency(item.totalOrderPrice)}
           </div>
         </div>
       ))}
 
-      <div className="text-end fw-bold mt-3">Total: SEK {total.toFixed(2)}</div>
+      <div className="text-end fw-bold mt-3">
+        Total: {formatCurrency(total)}
+      </div>
     </div>
   );
 };

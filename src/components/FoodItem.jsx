@@ -1,3 +1,5 @@
+import { formatCurrency } from "../utils/formatter";
+
 const FoodItem = ({ title, image, description, price, handleAddItem }) => {
   return (
     <div className="card h-100">
@@ -13,7 +15,7 @@ const FoodItem = ({ title, image, description, price, handleAddItem }) => {
         <h5 className="card-title">{title}</h5>
         <p className="card-text ">{description}</p>
         <div className="d-flex flex-column justify-content-between mt-auto">
-          <p className="fw-bold mb-2">SEK {price.toFixed(2)}</p>
+          <p className="fw-bold mb-2">{formatCurrency(price)}</p>
           <button
             className="btn btn-primary"
             onClick={() => {
